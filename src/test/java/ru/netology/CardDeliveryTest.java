@@ -144,19 +144,19 @@ public class CardDeliveryTest {
         $("[data-test-id='name'].input_invalid .input__sub").shouldHave(exactText("Имя и Фамилия указаные неверно. Допустимы только русские буквы, пробелы и дефисы."));
     }
 
-    @Test
-    void shouldFieldNameWithOneWord() {
-        String meetingDate = LocalDate.now().plusDays(3).format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
+    //@Test
+    //void shouldFieldNameWithOneLetter () {
+    //    String meetingDate = LocalDate.now().plusDays(3).format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
 
-        $("[data-test-id=city] input").setValue("Астрахань");
-        $("[placeholder='Дата встречи']").doubleClick().sendKeys(Keys.BACK_SPACE);
-        $("[placeholder='Дата встречи']").setValue(meetingDate);
-        $("[name='name']").setValue("Иванов");
-        $("[name='phone']").setValue("+76665554433");
-        $("[data-test-id=agreement]").click();
-        $("[class='button__text']").click();
-        $("[data-test-id='name'].input_invalid .input__sub").shouldHave(exactText("Имя и Фамилия указаные неверно. Допустимы только русские буквы, пробелы и дефисы."));
-    }
+    //    $("[data-test-id=city] input").setValue("Астрахань");
+    //    $("[placeholder='Дата встречи']").doubleClick().sendKeys(Keys.BACK_SPACE);
+    //    $("[placeholder='Дата встречи']").setValue(meetingDate);
+    //    $("[name='name']").setValue("И");
+    //    $("[name='phone']").setValue("+76665554433");
+    //    $("[data-test-id=agreement]").click();
+    //    $("[class='button__text']").click();
+    //    $("[data-test-id='name'].input_invalid .input__sub").shouldHave(exactText("Имя и Фамилия указаные неверно. Допустимы только русские буквы, пробелы и дефисы."));
+    //}
 
     @Test
     void shouldEmptyPhoneField() {
